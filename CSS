@@ -1,0 +1,167 @@
+/*
+███████╗████████╗██╗   ██╗██╗     ███████╗
+██╔════╝╚══██╔══╝╚██╗ ██╔╝██║     ██╔════╝
+███████╗   ██║    ╚████╔╝ ██║     █████╗  
+╚════██║   ██║     ╚██╔╝  ██║     ██╔══╝  
+███████║   ██║      ██║   ███████╗███████╗
+╚══════╝   ╚═╝      ╚═╝   ╚══════╝╚══════╝
+*/
+
+.charsheet 
+{ 
+    font-family: 'Times New Roman';
+    color: #333333;
+    font-size: 15px;
+    width: 800px;
+    background: #ffffff;
+    box-sizing: border-box;}
+
+.charsheet *, .charsheet *:before, .charsheet *:after {
+    box-sizing: inherit;
+}
+
+/* Redéfinie des trucs à zéro, retirer les puces des listes et la décoraction des liens */
+.charsheet h1, .charsheet h2, .charsheet h3, .charsheet h4, .charsheeth5, 
+.charsheet h6, .charsheet a, .charsheet p, .charsheet span, .charsheet div,
+.charsheet figure, .charsheet img, .charsheet ul, .charsheet li, .charsheet select, .charsheet option 
+.charsheet body, .charsheet fieldset, .charsheet input, .charsheet label, .charsheet textarea 
+{
+	margin: 0; padding: 0; border: 0;
+	box-shadow: 0 0 0 #000000; border-radius: 0;
+}
+
+.charsheet li{list-style: none;}
+.charsheet a{text-decoration: none;}
+
+/* DIV */
+.sheet-div1, .sheet-div2, .sheet-div3, .sheet-div4{
+    width: 700px;
+    padding: 5px;
+    border: 1px solid #333333;
+    box-shadow: 5px 5px 0px #333333;}
+    
+.sheet-div1 * { display: inline-block;}
+.sheet-div2 * { display: inline-block;}
+.sheet-div3 * { display: inline-block;}
+.sheet-div4 * { display: inline-block;}
+
+
+
+
+
+/* LI */
+.sheet-li1{ width: 675px;}
+.sheet-li2{ width: 335px;}
+.sheet-div2 .sheet-li3{ width: 350px; font-style: italic;}
+
+.sheet-div2 li{
+    vertical-align: top;
+    padding: 0 5px;
+    width: 100px;}
+
+.sheet-vigueur, .sheet-agilite, .sheet-intelligence, .sheet-esprit,
+.sheet-pv, .sheet-pe, .sheet-condition, .sheet-maladresse,
+.sheet-blesse, .sheet-empoisonne, .sheet-malade, .sheet-las, .sheet-surexcite, .sheet-choc{
+    height: 50px; 
+    width: 50px !important;
+    padding: 0 !important; 
+    display: inline-block;}
+
+.sheet-li4{ width: 150px !important;}
+
+.sheet-vigueur{ background: url('https://raw.githubusercontent.com/MiniSteff/Ryuutama/master/vigueur.png'); background-size: 50px 50px;}
+.sheet-agilite{ background: url('https://raw.githubusercontent.com/MiniSteff/Ryuutama/master/agilite.png'); background-size: 50px 50px;}
+.sheet-intelligence{ background: url('https://raw.githubusercontent.com/MiniSteff/Ryuutama/master/intelligence.png'); background-size: 50px 50px;}
+.sheet-esprit{ background: url('https://raw.githubusercontent.com/MiniSteff/Ryuutama/master/esprit.png'); background-size: 50px 50px;}
+
+.sheet-pv{ background: url('https://raw.githubusercontent.com/MiniSteff/Ryuutama/master/pv.png'); background-size: 50px 50px;}
+.sheet-pe{ background: url('https://raw.githubusercontent.com/MiniSteff/Ryuutama/master/pe.png'); background-size: 50px 50px;}
+.sheet-condition{ background: url('https://raw.githubusercontent.com/MiniSteff/Ryuutama/master/condition.png'); background-size: 50px 50px;}
+.sheet-maladresse{ background: url('https://raw.githubusercontent.com/MiniSteff/Ryuutama/master/maladresse.png'); background-size: 50px 50px;}
+
+.sheet-blesse{ background: url('https://raw.githubusercontent.com/MiniSteff/Ryuutama/master/blesse.png'); background-size: 50px 50px;}
+.sheet-empoisonne{ background: url('https://raw.githubusercontent.com/MiniSteff/Ryuutama/master/empoisonne.png'); background-size: 50px 50px;}
+.sheet-malade{ background: url('https://raw.githubusercontent.com/MiniSteff/Ryuutama/master/malade.png'); background-size: 50px 50px;}
+.sheet-las{ background: url('https://raw.githubusercontent.com/MiniSteff/Ryuutama/master/las.png'); background-size: 50px 50px;}
+.sheet-surexcite{ background: url('https://raw.githubusercontent.com/MiniSteff/Ryuutama/master/surexcitee.png'); background-size: 50px 50px;}
+.sheet-choc{ background: url('https://raw.githubusercontent.com/MiniSteff/Ryuutama/master/choc.png'); background-size: 50px 50px;}
+
+.sheet-div3 li button{}
+.sheet-div3 li p{ width: 10px; margin: 0 10px;}
+.sheet-div3 li input{ width: 350px;}
+.sheet-div3 li input[type="checkbox"]{ width: 10px; margin: 0 10px;}
+.sheet-div3 li select { width: 75px;}
+.sheet-div3 li textarea {margin: 5px 0;}
+.sheet-div3 li input[type="checkbox"]:checked + textarea{ display: none;}
+
+.sheet-div4 li button{}
+.sheet-div4 li p{ width: 10px; margin: 0 10px;}
+.sheet-div4 li input{ width: 300px;}
+.sheet-div4 li input[type="checkbox"]{ width: 10px; margin: 0 10px;}
+.sheet-div4 li select { width: 125px;}
+.sheet-div4 li textarea {margin: 5px 0;}
+.sheet-div4 li input[type="checkbox"]:checked + textarea{ display: none;}
+
+.sheet-div4 li .sheet-modificateur,
+.sheet-div4 li .sheet-malus,.sheet-div4 li .sheet-protection,
+.sheet-div4 li .sheet-quantiteInventaire,.sheet-div4 li .sheet-encombrementInventaire{ 
+    width: 28px; 
+    height: 28px;
+    text-align: center;
+    vertical-align: top;
+    margin: 0 10px 2px; 
+    border: 1px solid #999999;}
+
+.sheet-div4 li .sheet-intitule{ width: 75px;}
+.sheet-div4 li .sheet-intitule2{ width: 50px;}
+.sheet-div4 li .sheet-intitule3{ width: 60px;}
+.sheet-div4 li .sheet-intitule4{ width: 100px;}
+
+
+
+    
+/* INPUT */
+input{ 
+    vertical-align: top;
+    font-style: italic;}
+
+textarea{
+    padding: 5px;
+    border: 1px dashed #999999;
+    font-style; italic}
+    
+.sheet-li1 input{ width: 475px;}
+.sheet-li2 input{ width: 175px;}
+
+.sheet-div2 input{
+    font-size: 20px;
+    width: 80px;
+    font-style: normal;
+    font-weight: bold;}
+    
+    
+    
+    
+/* P */
+.sheet-div1 p{
+    font-weight: bold;
+    transition: 0.3s all ease-in;
+    width: 125px;}
+
+.sheet-div1 p:hover{
+    text-indent: 10px;}
+
+.sheet-d{
+    vertical-align: middle;
+    font-size: 15px;
+    width: 10px;}
+    
+.sheet-titre{
+    font-size: 20px;
+    font-weight: bold;}
+    
+
+/* IMG */
+.sheet-logo{ 
+    margin: 0 auto;
+    width: 700px;}
