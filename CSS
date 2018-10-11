@@ -1,170 +1,553 @@
-/*
-███████╗████████╗██╗   ██╗██╗     ███████╗
-██╔════╝╚══██╔══╝╚██╗ ██╔╝██║     ██╔════╝
-███████╗   ██║    ╚████╔╝ ██║     █████╗  
-╚════██║   ██║     ╚██╔╝  ██║     ██╔══╝  
-███████║   ██║      ██║   ███████╗███████╗
-╚══════╝   ╚═╝      ╚═╝   ╚══════╝╚══════╝
-*/
+<img src="https://raw.githubusercontent.com/MiniSteff/Ryuutama/master/logo.png" / class="sheet-logo"><br><br>
 
-.charsheet 
-{ 
-    font-family: 'Times New Roman';
-    color: #333333;
-    font-size: 15px;
-    width: 800px;
-    background: #ffffff;
-    box-sizing: border-box;}
+<input type="radio" name="attr_onglet" value="voyageur" checked><span>Voyageur</span>
+<input type="radio" name="attr_onglet" value="ryuujin"><span>Ryuujin</span>
 
-.charsheet *, .charsheet *:before, .charsheet *:after {
-    box-sizing: inherit;
-}
-
-/* Redéfinie des trucs à zéro, retirer les puces des listes et la décoraction des liens */
-.charsheet h1, .charsheet h2, .charsheet h3, .charsheet h4, .charsheeth5, 
-.charsheet h6, .charsheet a, .charsheet p, .charsheet span, .charsheet div,
-.charsheet figure, .charsheet img, .charsheet ul, .charsheet li, .charsheet select, .charsheet option 
-.charsheet body, .charsheet fieldset, .charsheet input, .charsheet label, .charsheet textarea 
-{
-	margin: 0; padding: 0; border: 0;
-	box-shadow: 0 0 0 #000000; border-radius: 0;
-}
-
-.charsheet li{list-style: none;}
-.charsheet a{text-decoration: none;}
-
-/* DIV */
-.sheet-div1, .sheet-div2, .sheet-div3, .sheet-div4{
-    width: 700px;
-    padding: 5px;
-    border: 1px solid #333333;
-    box-shadow: 5px 5px 0px #333333;}
+<div class="sheet-voyageur">
+    <!-- INFORMATION -->
+    <div class="sheet-div1">
+        <ul>
+            <li class="sheet-li2">
+                <p>Nom</p>
+                <input type="text" name="attr_nom" placeholder="..........">
+            </li>
+            <li class="sheet-li2">
+                <p>Joueur</p>
+                <input type="text" name="attr_joueur" placeholder="..........">
+            </li>
+            
+            <li class="sheet-li2">
+                <p>Niveau</p>
+                <input type="text" name="attr_niveau" placeholder="..........">
+            </li>
+            <li class="sheet-li2">
+                <p>Expériences</p>
+                <input type="text" name="attr_experience" placeholder="..........">
+            </li>
+            <li class="sheet-li2">
+                <p>Âge</p>
+                <input type="text" name="attr_age" placeholder="..........">
+            </li>
+            <li class="sheet-li2">
+                <p>Genre</p>
+                <input type="text" name="attr_genre" placeholder="..........">
+            </li>
+            <li class="sheet-li2">
+                <p>Classe 1</p>
+                <input type="text" name="attr_classe1" placeholder="..........">
+            </li>
+            <li class="sheet-li2">
+                <p>Classe 2</p>
+                <input type="text" name="attr_classe2" placeholder="..........">
+            </li>
+            
+            <li class="sheet-li2">
+                <p>Type</p>
+                <input type="text" name="attr_type" placeholder="..........">
+            </li>
+            <li class="sheet-li2">
+                <p>Rôle</p>
+                <input type="text" name="attr_role" placeholder="..........">
+            </li>
+            
+            <li class="sheet-li2">
+                <p>Arme favorite</p>
+                <input type="text" name="attr_armeFavorite" placeholder="..........">
+            </li>
+            <li class="sheet-li2">
+                <p>Objet fétiche</p>
+                <input type="text" name="attr_objetFetiche" placeholder="..........">
+            </li>
+            <li class="sheet-li1">
+                <p>Paysage / Climat</p>
+                <input type="text" name="attr_paysageClimat" placeholder="..........">
+            </li>
+        </ul><br><br>
+        
+        <p>Notes</p><br>
+        <textarea name="attr_note" placeholder=".........."></textarea>
+    </div>
+    <br><br>
     
-.sheet-div1 * { display: inline-block;}
-.sheet-div2 * { display: inline-block;}
-.sheet-div3 * { display: inline-block;}
-.sheet-div4 * { display: inline-block;}
-
-
-
-
-
-/* LI */
-.sheet-li1{ width: 675px;}
-.sheet-li2{ width: 335px;}
-.sheet-div2 .sheet-li3{ width: 350px; font-style: italic;}
-
-.sheet-div2 li{
-    vertical-align: top;
-    padding: 0 5px;
-    width: 100px;}
-
-.sheet-vigueur, .sheet-agilite, .sheet-intelligence, .sheet-esprit,
-.sheet-pv, .sheet-pe, .sheet-condition, .sheet-maladresse,
-.sheet-blesse, .sheet-empoisonne, .sheet-malade, .sheet-las, .sheet-surexcite, .sheet-choc{
-    height: 50px; 
-    width: 50px !important;
-    padding: 0 !important; 
-    display: inline-block;}
-
-.sheet-li4{ width: 150px !important;}
-
-.sheet-vigueur{ background: url('https://raw.githubusercontent.com/MiniSteff/Ryuutama/master/vigueur.png'); background-size: 50px 50px;}
-.sheet-agilite{ background: url('https://raw.githubusercontent.com/MiniSteff/Ryuutama/master/agilite.png'); background-size: 50px 50px;}
-.sheet-intelligence{ background: url('https://raw.githubusercontent.com/MiniSteff/Ryuutama/master/intelligence.png'); background-size: 50px 50px;}
-.sheet-esprit{ background: url('https://raw.githubusercontent.com/MiniSteff/Ryuutama/master/esprit.png'); background-size: 50px 50px;}
-
-.sheet-pv{ background: url('https://raw.githubusercontent.com/MiniSteff/Ryuutama/master/pv.png'); background-size: 50px 50px;}
-.sheet-pe{ background: url('https://raw.githubusercontent.com/MiniSteff/Ryuutama/master/pe.png'); background-size: 50px 50px;}
-.sheet-condition{ background: url('https://raw.githubusercontent.com/MiniSteff/Ryuutama/master/condition.png'); background-size: 50px 50px;}
-.sheet-maladresse{ background: url('https://raw.githubusercontent.com/MiniSteff/Ryuutama/master/maladresse.png'); background-size: 50px 50px;}
-
-.sheet-blesse{ background: url('https://raw.githubusercontent.com/MiniSteff/Ryuutama/master/blesse.png'); background-size: 50px 50px;}
-.sheet-empoisonne{ background: url('https://raw.githubusercontent.com/MiniSteff/Ryuutama/master/empoisonne.png'); background-size: 50px 50px;}
-.sheet-malade{ background: url('https://raw.githubusercontent.com/MiniSteff/Ryuutama/master/malade.png'); background-size: 50px 50px;}
-.sheet-las{ background: url('https://raw.githubusercontent.com/MiniSteff/Ryuutama/master/las.png'); background-size: 50px 50px;}
-.sheet-surexcite{ background: url('https://raw.githubusercontent.com/MiniSteff/Ryuutama/master/surexcitee.png'); background-size: 50px 50px;}
-.sheet-choc{ background: url('https://raw.githubusercontent.com/MiniSteff/Ryuutama/master/choc.png'); background-size: 50px 50px;}
-
-.sheet-div3 li button{}
-.sheet-div3 li p{ width: 10px; margin: 0 10px;}
-.sheet-div3 li input{ width: 350px;}
-.sheet-div3 li input[type="checkbox"]{ width: 10px; margin: 0 10px;}
-.sheet-div3 li select { width: 75px;}
-.sheet-div3 li textarea {margin: 5px 0;}
-.sheet-div3 li input[type="checkbox"]:checked + textarea{ display: none;}
-
-.sheet-div4 li button{}
-.sheet-div4 li p{ width: 10px; margin: 0 10px;}
-.sheet-div4 li input{ width: 300px;}
-.sheet-div4 li input[type="checkbox"]{ width: 10px; margin: 0 10px;}
-.sheet-div4 li select { width: 125px;}
-.sheet-div4 li textarea {margin: 5px 0;}
-.sheet-div4 li input[type="checkbox"]:checked + textarea{ display: none;}
-
-.sheet-div4 li .sheet-modificateur,
-.sheet-div4 li .sheet-malus,.sheet-div4 li .sheet-protection,
-.sheet-div4 li .sheet-quantiteInventaire,.sheet-div4 li .sheet-encombrementInventaire{ 
-    width: 28px; 
-    height: 28px;
-    text-align: center;
-    vertical-align: top;
-    margin: 0 10px 2px; 
-    border: 1px solid #999999;}
-
-.sheet-div4 li .sheet-intitule{ width: 75px;}
-.sheet-div4 li .sheet-intitule2{ width: 50px;}
-.sheet-div4 li .sheet-intitule3{ width: 60px;}
-.sheet-div4 li .sheet-intitule4{ width: 100px;}
-
-
-
+    <!-- TALENT -->
+    <div class="sheet-div3">
+        <p class="sheet-titre">Talents</p><br>
+        <ul>
+            <li>
+                <button type="roll" value="/r @{attribut1_1}+@{attribut1_2}"></button>
+                <input type="text" name="attr_talent1" placeholder='..........'>
+                <select name="attr_attribut1_1">
+                    <option value="0"></option>
+                    <option value="1d@{vigueur}">VIG</option>
+                    <option value="1d@{esprit}">ESP</option>
+                    <option value="1d@{intelligence}">INT</option>
+                    <option value="1d@{agilite}">AGI</option>
+                </select>
+                <p>+</p>
+                <select name="attr_attribut1_2">
+                    <option value="0"></option>
+                    <option value="1d@{vigueur}">VIG</option>
+                    <option value="1d@{esprit}">ESP</option>
+                    <option value="1d@{intelligence}">INT</option>
+                    <option value="1d@{agilite}">AGI</option>
+                </select>
+                <input type="checkbox" name="attr_descriptionCheck1" checked>
+                <textarea name="attr_description1" placeholder='..........'></textarea>
+            </li>
+            
+            <li>
+                <button type="roll" value="/r @{attribut2_1}+@{attribut2_2}"></button>
+                <input type="text" name="attr_talent2" placeholder='..........'>
+                <select name="attr_attribut2_1">
+                    <option value="0"></option>
+                    <option value="1d@{vigueur}">VIG</option>
+                    <option value="1d@{esprit}">ESP</option>
+                    <option value="1d@{intelligence}">INT</option>
+                    <option value="1d@{agilite}">AGI</option>
+                </select>
+                <p>+</p>
+                <select name="attr_attribut2_2">
+                    <option value="0"></option>
+                    <option value="1d@{vigueur}">VIG</option>
+                    <option value="1d@{esprit}">ESP</option>
+                    <option value="1d@{intelligence}">INT</option>
+                    <option value="1d@{agilite}">AGI</option>
+                </select>
+                <input type="checkbox" name="attr_descriptionCheck2" checked>
+                <textarea name="attr_description2" placeholder='..........'></textarea>
+            </li>
+            
+            <li>
+                <button type="roll" value="/r @{attribut3_1}+@{attribut3_2}"></button>
+                <input type="text" name="attr_talent3" placeholder='..........'>
+                <select name="attr_attribut3_1">
+                    <option value="0"></option>
+                    <option value="1d@{vigueur}">VIG</option>
+                    <option value="1d@{esprit}">ESP</option>
+                    <option value="1d@{intelligence}">INT</option>
+                    <option value="1d@{agilite}">AGI</option>
+                </select>
+                <p>+</p>
+                <select name="attr_attribut3_2">
+                    <option value="0"></option>
+                    <option value="1d@{vigueur}">VIG</option>
+                    <option value="1d@{esprit}">ESP</option>
+                    <option value="1d@{intelligence}">INT</option>
+                    <option value="1d@{agilite}">AGI</option>
+                </select>
+                <input type="checkbox" name="attr_descriptionCheck3" checked>
+                <textarea name="attr_description3" placeholder='..........'></textarea>
+            </li>
+            
+            <li>
+                <button type="roll" value="/r @{attribut4_1}+@{attribut4_2}"></button>
+                <input type="text" name="attr_talent4" placeholder='..........'>
+                <select name="attr_attribut4_1">
+                    <option value="0"></option>
+                    <option value="1d@{vigueur}">VIG</option>
+                    <option value="1d@{esprit}">ESP</option>
+                    <option value="1d@{intelligence}">INT</option>
+                    <option value="1d@{agilite}">AGI</option>
+                </select>
+                <p>+</p>
+                <select name="attr_attribut4_2">
+                    <option value="0"></option>
+                    <option value="1d@{vigueur}">VIG</option>
+                    <option value="1d@{esprit}">ESP</option>
+                    <option value="1d@{intelligence}">INT</option>
+                    <option value="1d@{agilite}">AGI</option>
+                </select>
+                <input type="checkbox" name="attr_descriptionCheck4" checked>
+                <textarea name="attr_description4" placeholder='..........'></textarea>
+            </li>
+            
+            <li>
+                <button type="roll" value="/r @{attribut5_1}+@{attribut5_2}"></button>
+                <input type="text" name="attr_talent5" placeholder='..........'>
+                <select name="attr_attribut5_1">
+                    <option value="0"></option>
+                    <option value="1d@{vigueur}">VIG</option>
+                    <option value="1d@{esprit}">ESP</option>
+                    <option value="1d@{intelligence}">INT</option>
+                    <option value="1d@{agilite}">AGI</option>
+                </select>
+                <p>+</p>
+                <select name="attr_attribut5_2">
+                    <option value="0"></option>
+                    <option value="1d@{vigueur}">VIG</option>
+                    <option value="1d@{esprit}">ESP</option>
+                    <option value="1d@{intelligence}">INT</option>
+                    <option value="1d@{agilite}">AGI</option>
+                </select>
+                <input type="checkbox" name="attr_descriptionCheck5" checked>
+                <textarea name="attr_description5" placeholder='..........'></textarea>
+            </li>
+            
+            <li>
+                <button type="roll" value="/r @{attribut6_1}+@{attribut6_2}"></button>
+                <input type="text" name="attr_talent6" placeholder='..........'>
+                <select name="attr_attribut6_1">
+                    <option value="0"></option>
+                    <option value="1d@{vigueur}">VIG</option>
+                    <option value="1d@{esprit}">ESP</option>
+                    <option value="1d@{intelligence}">INT</option>
+                    <option value="1d@{agilite}">AGI</option>
+                </select>
+                <p>+</p>
+                <select name="attr_attribut6_2">
+                    <option value="0"></option>
+                    <option value="1d@{vigueur}">VIG</option>
+                    <option value="1d@{esprit}">ESP</option>
+                    <option value="1d@{intelligence}">INT</option>
+                    <option value="1d@{agilite}">AGI</option>
+                </select>
+                <input type="checkbox" name="attr_descriptionCheck6" checked>
+                <textarea name="attr_description6" placeholder='..........'></textarea>
+            </li>
+        </ul>
+        <br><br>
+        
+        
+        <p class="sheet-titre">Action</p><br>
+        <ul>
+            <fieldset class="repeating_action">
+                <li>
+                    <button type="roll" value="/r @{attributAction1}+@{attributAction2}"></button>
+                    <input type="text" name="attr_nomAction" placeholder='..........'>
+                    <select name="attr_attributAction1">
+                        <option value="0"></option>
+                        <option value="1d@{vigueur}">VIG</option>
+                        <option value="1d@{esprit}">ESP</option>
+                        <option value="1d@{intelligence}">INT</option>
+                        <option value="1d@{agilite}">AGI</option>
+                    </select>
+                    <p>+</p>
+                    <select name="attr_attributAction2">
+                        <option value="0"></option>
+                        <option value="1d@{vigueur}">VIG</option>
+                        <option value="1d@{esprit}">ESP</option>
+                        <option value="1d@{intelligence}">INT</option>
+                        <option value="1d@{agilite}">AGI</option>
+                    </select>
+                </li>
+            </fieldset>
+        </ul>
+        <br><br>
+        
+        
+        <p class="sheet-titre">Magie</p><br>
+        <ul>
+            <fieldset class="repeating_magie">
+                <li>
+                    <button type="roll" value="/r @{attributMagie1}+@{attributMagie2}"></button>
+                    <input type="text" name="attr_nomMagie" placeholder='..........'>
+                    <select name="attr_attributMagie1">
+                        <option value="0"></option>
+                        <option value="1d@{vigueur}">VIG</option>
+                        <option value="1d@{esprit}">ESP</option>
+                        <option value="1d@{intelligence}">INT</option>
+                        <option value="1d@{agilite}">AGI</option>
+                    </select>
+                    <p>+</p>
+                    <select name="attr_attributMagie2">
+                        <option value="0"></option>
+                        <option value="1d@{vigueur}">VIG</option>
+                        <option value="1d@{esprit}">ESP</option>
+                        <option value="1d@{intelligence}">INT</option>
+                        <option value="1d@{agilite}">AGI</option>
+                    </select>
+                    <input type="checkbox" name="attr_descriptionMagieCheck" checked>
+                    <textarea name="attr_descriptionMagie" placeholder='..........'></textarea>
+                </li>
+            </fieldset>
+        </ul>
+    </div>
+    <br><br>
     
-/* INPUT */
-input{ 
-    vertical-align: top;
-    font-style: italic;}
+    <!-- CARACTERISTIQUE -->
+    <div class="sheet-div2">
+        <ul>
+            <li class="sheet-vigueur"></li>
+            <li>
+                <p>Vigueur</p><br>
+                <p class="sheet-d">d</p><input type="text" name="attr_vigueur" value="0">
+            </li>
+            
+            <li class="sheet-pv"></li>
+            <li>
+                <p>PV</p><br>
+                <input type="text" name="attr_pv" value="0">
+            </li>
+            <li class="sheet-li3">
+                <p>Vos PV maximum sont égaux au double de votre vigueur</p>
+            </li><br>
+            
+            <li class="sheet-esprit"></li>
+            <li>
+                <p>Esprit</p><br>
+                <p class="sheet-d">d</p><input type="text" name="attr_esprit" value="0">
+            </li>
+            
+            <li class="sheet-pe"></li>
+            <li>
+                <p>PE</p><br>
+                <input type="text" name="attr_pe" value="0">
+            </li>
+            <li class="sheet-li3">
+                <p>Vos PE maximum sont égaux au double de votre esprit</p>
+            </li><br>
+            
+            <li class="sheet-intelligence"></li>
+            <li>
+                <p>Intelligence</p><br>
+                <p class="sheet-d">d</p><input type="text" name="attr_intelligence" value="0">
+            </li>
+            
+            <li class="sheet-condition"></li>
+            <li>
+                <p>Condition</p><br>
+                <input type="text" name="attr_condition" value="0">
+            </li>
+            <li class="sheet-li3">
+                <p>Un test de condition est fait a chaque début de journée pour définir l'état de votre personnage.</p>
+            </li><br>
+            
+            <li class="sheet-agilite"></li>
+            <li>
+                <p>Agilité</p><br>
+                <p class="sheet-d">d</p><input type="text" name="attr_agilite" value="0">
+            </li>
+            
+            <li class="sheet-maladresse"></li>
+            <li>
+                <p>Maladresse</p><br>
+                <input type="text" name="attr_maladresse" value="0">
+            </li>
+            <li class="sheet-li3">
+                <p>Un fumble vous donne un point de maladresse.</p>
+            </li>
+        </ul>
+        <br><br>
+        <ul>
+            <li class="sheet-blesse"></li>
+            <li class="sheet-li4">
+                <p>Blessé (AGI-1)</p><br>
+                <input type="text" name="attr_blesse" value="0">
+            </li>
+            <li class="sheet-empoisonne"></li>
+            <li class="sheet-li4">
+                <p>Empoisonné (VIG -1)</p><br>
+                <input type="text" name="attr_empoisonne" value="0">
+            </li>
+            <li class="sheet-malade"></li>
+            <li class="sheet-li4">
+                <p>Malade (AGI-1 / VIG -1)</p><br>
+                <input type="text" name="attr_malade" value="0">
+            </li><br>
+            
+            
+            <li class="sheet-las"></li>
+            <li class="sheet-li4">
+                <p>LAS (ESP -1)</p><br>
+                <input type="text" name="attr_las" value="0">
+            </li>
+            <li class="sheet-surexcite"></li>
+            <li class="sheet-li4">
+                <p>Surexcité (INT -1)</p><br>
+                <input type="text" name="attr_surexcite" value="0">
+            </li>
+            <li class="sheet-choc"></li>
+            <li class="sheet-li4">
+                <p>Choc (ESP -1 / INT -1)</p><br>
+                <input type="text" name="attr_choc" value="0">
+            </li><br>
+        </ul>
+    </div>
+    <br><br>
+    
+    <!-- EQUIPEMENTS -->
+    <div class="sheet-div4">
+        <ul>
+            <li class="sheet-li1">
+                <p class="sheet-intitule5">Encombrement</p>
+                <input type="text" name="attr_encombrement" placeholder="..........">
+            </li>
+            <li class="sheet-li1">
+                <p class="sheet-intitule5">Encombrement max</p>
+                <input type="text" name="attr_encombrementMax" placeholder="..........">
+            </li>
+            <li class="sheet-li1">
+                <p class="sheet-intitule5">Pièce d'or</p>
+                <input type="text" name="attr_pieceOr" placeholder="..........">
+            </li>
+        </ul>
+        <br><br>
+        
+        <p class="titre">Armes</p><br>
+        <ul>
+        <fieldset class="repeating_arme">
+            <li>
+                <button type="roll" value='/me @{nom} attaque avec "@{nomArme}". Sa précision est de @{toucherArme}'></button>
+                <input type="text" name="attr_nomArme" placeholder='..........'>
+                <select name="attr_toucherArme">
+                    <option value="[[1d@{agilite}+1d@{intelligence}-2+@{modifToucher}]] et ses dégâts sont de [[1d@{agilite}+@{modifDegat}]]">Arc</option>
+                    <option value="[[1d@{agilite}+1d@{intelligence}+1+@{modifToucher}]] et ses dégâts sont de [[1d@{intelligence}-1+@{modifDegat}]]">Épée courte</option>
+                    <option value="[[1d@{vigueur}+1d@{agilite}+@{modifToucher}]] et ses dégâts sont de [[1d@{vigueur}+@{modifDegat}]]">Épée longue</option>
+                    <option value="[[1d@{vigueur}+1d@{vigueur}-1+@{modifToucher}]] et ses dégâts sont de [[1d@{vigueur}+@{modifDegat}]]">Hache</option>
+                    <option value="[[1d@{vigueur}+1d@{agilite}+@{modifToucher}]] et ses dégâts sont de [[1d@{vigueur}+1+@{modifDegat}]]">Lance</option>
+                    <option value="[[1d@{vigueur}+1d@{agilite}+@{modifToucher}]] et ses dégâts sont de [[1d@{vigueur}-2+@{modifDegat}]]">Main nue</option>
+                    <option value="[[1d@{vigueur}+1d@{agilite}+@{modifToucher}]] et ses dégâts sont de [[1d@{vigueur}-1+@{modifDegat}]]">Arme improvisé</option>
+                </select>
+                <p class="sheet-intitule6">Précision</p>
+                <input type="text" class="sheet-modificateur" name="attr_modifToucher" value='0'>
+                <p class="sheet-intitule6">Dégât</p>
+                <input type="text" class="sheet-modificateur" name="attr_modifDegat" value='0'>
+                <input type="checkbox" name="attr_descriptionArmeCheck" checked>
+                <textarea name="attr_descriptionArme" placeholder='..........'></textarea><br>
+            </li>
+        </fieldset>
+        </ul>
+        <br><br>
+        
+        <p class="titre">Armures</p><br>
+        <ul>
+        <fieldset class="repeating_armure">
+            <li>
+                <input type="text" name="attr_nomArmure" placeholder='..........'>
+                <p class="sheet-intitule">Protection :</p><input type="text" class="sheet-protection" name="attr_protection" value='0'>
+                <p class="sheet-intitule2">Malus :</p><input type="text" class="sheet-malus" name="attr_malus" value='0'>
+                <input type="checkbox" name="attr_descriptionArmureCheck" checked>
+                <textarea name="attr_descriptionArmure" placeholder='..........'></textarea><br>
+            </li>
+        </fieldset>
+        </ul>
+        <br><br>
+        
+        <p class="titre">Inventaire</p><br>
+        <ul>
+        <fieldset class="repeating_inventaire">
+            <li>
+                <input type="text" name="attr_nomInventaire" placeholder='..........'>
+                <p class="sheet-intitule3">Quantité :</p><input type="text" class="sheet-quantiteInventaire" name="attr_quantite" value='1'>
+                <p class="sheet-intitule4">Encombrement :</p><input type="text" class="sheet-encombrementInventaire" name="attr_encombrement" value='0'>
+                <input type="checkbox" name="attr_descriptionInventaireCheck" checked>
+                <textarea name="attr_descriptionInventaire" placeholder='..........'></textarea><br>
+            </li>
+        </fieldset>
+        </ul>
+        <br><br>
+        
+        <p class="titre">Sac à dos</p><br>
+        <ul>
+        <fieldset class="repeating_sacADos">
+            <li>
+                <input type="text" name="attr_nomSacADos" placeholder='..........'>
+                <p class="sheet-intitule3">Quantité :</p><input type="text" class="sheet-quantiteSacADos" name="attr_quantite" value='1'>
+                <p class="sheet-intitule4">Encombrement :</p><input type="text" class="sheet-encombrementSacADos" name="attr_encombrement" value='0'>
+                <input type="checkbox" name="attr_descriptionSacADosCheck" checked>
+                <textarea name="attr_descriptionSacADos" placeholder='..........'></textarea><br>
+            </li>
+        </fieldset>
+        </ul>
+        <br><br>
+        
+        <p class="titre">Animal de bât</p><br>
+        <ul>
+        <fieldset class="repeating_animalDeBat">
+            <li>
+                <input type="text" name="attr_animalDeBat" placeholder='..........'>
+                <p class="sheet-intitule3">Quantité :</p><input type="text" class="sheet-quantiteAnimalDeBat" name="attr_quantite" value='1'>
+                <p class="sheet-intitule4">Encombrement :</p><input type="text" class="sheet-encombrementAnimalDeBat" name="attr_encombrement" value='0'>
+                <input type="checkbox" name="attr_descriptionAnimalDeBatCheck" checked>
+                <textarea name="attr_descriptionAnimalDeBat" placeholder='..........'></textarea><br>
+            </li>
+        </fieldset>
+        </ul>
+    </div>
+    <br><br>
+</div>
 
-textarea{
-    padding: 5px;
-    border: 1px dashed #999999;
-    font-style; italic}
+<div class="sheet-ryuujin">
+     <div class="sheet-div1">
+        <ul>
+            <li class="sheet-li2">
+                <p>Nom</p>
+                <input type="text" name="attr_nom_ryuujin" placeholder="..........">
+            </li>
+            <li class="sheet-li2">
+                <p>Joueur</p>
+                <input type="text" name="attr_joueur_ryuujin" placeholder="..........">
+            </li>
+            
+            <li class="sheet-li2">
+                <p>Niveau</p>
+                <input type="text" name="attr_niveau_ryuujin" placeholder="..........">
+            </li>
+            <li class="sheet-li2">
+                <p>Partie</p>
+                <input type="text" name="attr_partie_ryuujin" placeholder="..........">
+            </li>
+            <li class="sheet-li1">
+                <p>Couleur</p>
+                <input type="text" name="attr_couleur_ryuujin" placeholder="..........">
+            </li>
+        </ul><br><br>
+        
+        <p>Notes</p><br>
+        <textarea name="attr_note" placeholder=".........."></textarea>
+    </div>
+    <br><br>
     
-.sheet-li1 input{ width: 475px;}
-.sheet-li2 input{ width: 175px;}
-
-.sheet-div2 input{
-    font-size: 20px;
-    width: 80px;
-    font-style: normal;
-    font-weight: bold;}
+    <div class="sheet-div3">
+        <p class="sheet-titre">Artefacts</p><br>
+        <ul>
+            <li>
+                <input type="text" name="attr_artefact" placeholder='Artefact (nom)'>
+                <input type="checkbox" name="attr_artefactCheck" checked>
+                <textarea name="attr_artefact" placeholder='..........'></textarea>
+            </li>
+        </ul><br><br>
+        
+        <p class="sheet-titre">Souffles</p><br>
+        <ul>
+            <fieldset class="repeating_souffles">
+                <li>
+                    <input type="text" name="attr_souffles" placeholder='..........'>
+                    <input type="checkbox" name="attr_soufflesCheck" checked>
+                    <textarea name="attr_souffles" placeholder='..........'></textarea>
+                </li>
+            </fieldset>
+        </ul><br><br>
+        
+        <p class="sheet-titre">Éveils</p><br>
+        <ul>
+            <fieldset class="repeating_eveils">
+                <li>
+                    <input type="text" name="attr_eveils" placeholder='..........'>
+                    <input type="checkbox" name="attr_eveilsCheck" checked>
+                    <textarea name="attr_eveils" placeholder='..........'></textarea>
+                </li>
+            </fieldset>
+        </ul><br><br>
+    </div>
+    <br><br>
     
+    <div class="sheet-div3">
+        <p class="sheet-titre">Apparence</p><br>
+        <textarea name="attr_apparence_ryuujin" placeholder='..........'></textarea><br><br>
+        
+        <p class="sheet-titre">Vocation</p><br>
+        <textarea name="attr_vocation_ryuujin" placeholder='..........'></textarea><br><br>
+        
+        <p class="sheet-titre">Demeure</p><br>
+        <textarea name="attr_demeure_ryuujin" placeholder='..........'></textarea><br><br>
+        
+        <p class="sheet-titre">Voyageurs</p><br>
+        <textarea name="attr_voyageurs_ryuujin" placeholder='..........'></textarea><br><br>
+        
+        <p class="sheet-titre">Historique</p><br>
+        <textarea name="attr_historique_ryuujin" placeholder='..........'></textarea><br><br>
+    </div>
+    <br><br>
     
-    
-    
-/* P */
-.sheet-div1 p{
-    font-weight: bold;
-    transition: 0.3s all ease-in;
-    width: 125px;}
-
-.sheet-div1 p:hover{
-    text-indent: 10px;}
-
-.sheet-d{
-    vertical-align: middle;
-    font-size: 15px;
-    width: 10px;}
-    
-.sheet-titre{
-    font-size: 20px;
-    font-weight: bold;}
-    
-.sheet-intitule5{
-    font-weight: bold;
-    width: 150px !important;}
-
-/* IMG */
-.sheet-logo{ 
-    margin: 0 auto;
-    width: 700px;}
+</div>
